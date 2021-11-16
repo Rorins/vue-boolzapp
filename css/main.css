@@ -35,7 +35,7 @@ body {
 
 /*Header*/
 header {
-  height: 8%;
+  min-height: 8%;
   background-color: #ededed;
   display: flex;
   align-items: center;
@@ -52,7 +52,8 @@ header {
   padding: 9px;
 }
 
-.user {
+.user,
+.notification {
   font-weight: bold;
   font-size: 20px;
 }
@@ -62,8 +63,12 @@ header {
 }
 /*Left column*/
 .col-4 section {
-  height: 9%;
+  min-height: 9%;
   background-color: #a2dffe;
+}
+
+.col-4 {
+  border-right: 1px solid rgb(209, 209, 209);
 }
 
 img {
@@ -71,6 +76,30 @@ img {
   border-radius: 50%;
 }
 
+.notification {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.notification a {
+  color: rgb(104, 103, 103);
+  font-weight: bold;
+}
+
+.bell {
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.search {
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
 /*Right column*/
 .col-8 main {
   background-image: url("../img/mine.jpg");

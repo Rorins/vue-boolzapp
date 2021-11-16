@@ -49,8 +49,31 @@
             </div>
           </header>
           <!--Section-->
-          <section><h4>Ricevi notifiche di nuovi messaggi</h4></section>
-          <main></main>
+          <section>
+            <!--Notification-->
+            <div class="notification">
+              <div class="bell">
+                <i class="fas fa-bell-slash"></i>
+              </div>
+              <div>
+                <span>Ricevi notifiche di nuovi messaggi</span>
+                <h5><a href="">Attiva notifiche desktop</a></h5>
+              </div>
+            </div>
+          </section>
+          <main>
+            <div class="search">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Cerca o inizia una nuova chat"
+                aria-label="Search"
+              />
+            </div>
+            <ul v-for="element in contacts">
+              <li><img :src="`img/avatar${element.avatar}.jpg`" alt="" /></li>
+            </ul>
+          </main>
         </div>
 
         <!--COLUMN RIGHT-->
