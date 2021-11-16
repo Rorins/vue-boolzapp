@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
+  font-size: 15px;
 }
 
 body {
@@ -32,16 +33,45 @@ body {
   height: 100%;
 }
 
-.row header {
+/*Header*/
+header {
   height: 8%;
   background-color: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.icons {
+  padding: 10px;
+}
+
+.icons i {
+  color: #bababa;
+  font-size: 15px;
+  padding: 9px;
+}
+
+.user {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.user h5 {
+  font-size: 15px;
+}
+/*Left column*/
 .col-4 section {
-  height: 8%;
+  height: 9%;
   background-color: #a2dffe;
 }
 
+img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+/*Right column*/
 .col-8 main {
   background-image: url("../img/mine.jpg");
   height: 85%;
