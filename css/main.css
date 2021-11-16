@@ -1,0 +1,53 @@
+/*General*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    #32a093 0%,
+    #32a093 15%,
+    #dee0da 15%,
+    #dee0da 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Container*/
+._container {
+  width: 80%;
+  min-width: 900px;
+  height: 95%;
+  background-color: white;
+}
+
+.row {
+  height: 100%;
+}
+
+.row header {
+  height: 8%;
+  background-color: #ededed;
+}
+
+.col-4 section {
+  height: 8%;
+  background-color: #a2dffe;
+}
+
+.col-8 main {
+  background-image: url("../img/mine.jpg");
+  height: 85%;
+}
+
+.col-8 .section {
+  height: 7%;
+  background-color: #f4f0ed;
+}
