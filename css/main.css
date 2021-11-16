@@ -155,6 +155,9 @@ ul {
 }
 
 /*Input*/
+.input {
+  background-color: #f4f0ed;
+}
 input .form-control {
   width: 700px;
 }
