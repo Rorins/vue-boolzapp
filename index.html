@@ -62,6 +62,7 @@
             </div>
           </section>
           <main>
+            <!--Search-->
             <div class="search">
               <input
                 class="form-control mr-sm-2"
@@ -70,8 +71,13 @@
                 aria-label="Search"
               />
             </div>
+
+            <!--Contacts-->
             <ul v-for="element in contacts">
-              <li><img :src="`img/avatar${element.avatar}.jpg`" alt="" /></li>
+              <li>
+                <img :src="`img/avatar${element.avatar}.jpg`" alt="" />
+                <span>{{element.name}}</span>
+              </li>
             </ul>
           </main>
         </div>

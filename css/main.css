@@ -99,6 +99,7 @@ img {
 
 ul {
   list-style-type: none;
+  padding-left: 15px;
 }
 /*Right column*/
 .col-8 main {
