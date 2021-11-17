@@ -21,6 +21,10 @@ body {
   align-items: center;
 }
 
+/*Uitilities*/
+.active {
+  background-color: gray;
+}
 /*Container*/
 ._container {
   width: 80%;

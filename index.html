@@ -81,8 +81,14 @@
             </div>
 
             <!--Contacts-->
-            <ul v-for="element in contacts">
-              <li>
+            <!--Ciclo elementi per stamparli 
+            e index per far si che al click current person diventa uguale all'index
+          e aggiungerci la classe active solo se è effettivamente uguale-->
+            <ul v-for="(element,index) in contacts">
+              <li
+                @click="setChat(index)"
+                :class="{active:currentPerson === index}"
+              >
                 <img :src="`img/avatar${element.avatar}.jpg`" alt="" />
                 <span>{{element.name}}</span>
               </li>
@@ -112,7 +118,7 @@
           <!--Messages-->
           <main class="messages">
             <div class="message-sent">
-              Messaggio inviato
+              {{contacts[currentPerson].name}}
               <h5>10/01/2021 15.50.00</h5>
             </div>
             <div class="message-received">

@@ -84,8 +84,15 @@ const app = new Vue({
                     }
                 ],
             },
-        ]
-        
-        
+        ],
+        //Contatore
+        currentPerson: 0,
+    },
+    //Setto la chat rendendo il contatore uguale al mio parametro
+    //che sarà la posizione della mia lista
+    methods: {
+        setChat(personIndex){
+            this.currentPerson = personIndex;
+        }
     }
 })
