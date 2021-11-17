@@ -83,16 +83,35 @@ const app = new Vue({
                         status: 'received'
                     }
                 ],
+    
             },
         ],
         //Contatore
         currentPerson: 0,
+        message :"",
     },
     //Setto la chat rendendo il contatore uguale al mio parametro
     //che sarà la posizione della mia lista
     methods: {
         setChat(personIndex){
             this.currentPerson = personIndex;
-        }
-    }
+        },
+        sendMessage(){
+            if(this.message !== ""){
+                this.contacts[this.currentPerson].messages.push({
+                    date: '10/01/2020 15:30:55',
+                    text: this.message,
+                    status: 'sent'
+                },
+                {
+                    date: '10/01/2020 15:30:55',
+                    text: "Mi sa che hai sbagliato numero",
+                    status: 'received'
+                }
+                );
+            //Puliamo lo spazio
+            this.message = "";}
+        },
+    },
+    
 })

@@ -134,8 +134,8 @@ ul {
   font-weight: bold;
 }
 
-.message-sent,
-.message-received {
+.messageSent,
+.messageReceived {
   border-radius: 10px;
   width: 300px;
   padding-top: 6px;
@@ -148,12 +148,12 @@ ul {
   text-align: right;
 }
 
-.message-sent {
+.messageSent {
   align-self: flex-end;
   background-color: #ddfabf;
 }
 
-.message-received {
+.messageReceived {
   align-self: flex-start;
   background-color: white;
 }
