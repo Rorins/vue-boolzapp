@@ -76,6 +76,8 @@
                   placeholder="Cerca o inizia una nuova chat"
                   aria-label=""
                   aria-describedby="basic-addon1"
+                  v-model.trim="typing"
+                  @keyup="searching"
                 />
               </div>
             </div>
@@ -89,6 +91,7 @@
                 v-for="(element,index) in contacts"
                 @click="setChat(index)"
                 :class="{active:currentPerson === index}"
+                v-if="element.visible"
               >
                 <img :src="`img/avatar${element.avatar}.jpg`" alt="" />
                 <span>{{element.name}}</span>

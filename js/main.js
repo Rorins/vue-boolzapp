@@ -89,6 +89,7 @@ const app = new Vue({
         //Contatore
         currentPerson: 0,
         message: "",
+        typing:"",
     },
     //Setto la chat rendendo il contatore uguale al mio parametro
     //che sarà la posizione della mia lista
@@ -112,9 +113,14 @@ const app = new Vue({
                 text: "Mi sa che hai sbagliato numero",
                 status: 'received'
             }), 3000);
-            
             }
+            
         },
+        searching(){
+            for(let i=0; i<this.contacts.length; i++){
+            if(this.contacts[i].name.includes(this.typing)){
+                this.contacts[i].visible = true}
+            else{this.contacts[i].visible = false}
+             }}
     },
-
 })
