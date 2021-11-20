@@ -28,6 +28,7 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
   <body>
     <div id="app" class="_container">
@@ -105,7 +106,10 @@
           <header>
             <!--User-->
             <div class="user d-flex">
-              <img src="./img/avatar_1.jpg" alt="" />
+              <img
+                :src="`./img/avatar${contacts[currentPerson].avatar}.jpg`"
+                alt=""
+              />
               <div>
                 <span>Michele</span>
                 <h5>Ultimo accesso oggi alle 10.35</h5>
@@ -122,11 +126,19 @@
           <!--Messages-->
           <main class="messages">
             <div
+              @click="menu"
               :class="{messageReceived:element.status ==='received',messageSent:element.status ==='sent'}"
               v-for="element in contacts[currentPerson].messages"
             >
               {{element.text}}
               <h5>{{element.date}}</h5>
+              <ul class="d-none" ref="dropdownMenu">
+                <li><a href="#">I'm a dropdown.</a></li>
+                <li><a href="#">In Pure CSS</a></li>
+                <li><a href="#">As in...</a></li>
+                <li><a href="#">No JavaScript.</a></li>
+                <li><a href="#">At All.</a></li>
+              </ul>
             </div>
           </main>
 
@@ -149,7 +161,7 @@
       </div>
     </div>
     <!--JS-->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
     <script src="./js/main.js"></script>
   </body>
 </html>

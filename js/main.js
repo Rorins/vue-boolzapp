@@ -108,19 +108,25 @@ const app = new Vue({
             //Puliamo lo spazio
             this.message = "";
 
-            setTimeout(this.contacts[this.currentPerson].messages.push({
+            setTimeout(() => {
+                this.contacts[this.currentPerson].messages.push({
                 date: '10/01/2020 15:30:55',
                 text: "Mi sa che hai sbagliato numero",
                 status: 'received'
-            }), 3000);
+            });
+            }, 1000);
             }
             
         },
         searching(){
             for(let i=0; i<this.contacts.length; i++){
-            if(this.contacts[i].name.includes(this.typing)){
+            if(this.contacts[i].name.toLowerCase().includes(this.typing.toLowerCase())){
                 this.contacts[i].visible = true}
             else{this.contacts[i].visible = false}
-             }}
+             }},
+
+        menu(){
+            this.$refs["dropdownMenu"].classList.toggle('d-none')
+        }
     },
 })
